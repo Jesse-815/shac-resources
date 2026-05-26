@@ -1116,7 +1116,12 @@ document.getElementById('hamburgerBtn').addEventListener('click', () => {
 //  QR CODE
 // ══════════════════════════════════════════════════════════
 function generateQR() {
-  const url = window.location.href.split('?')[0].split('#')[0];
+  // Use the canonical GitHub Pages URL when running locally or from file://
+  const canonical = 'https://Jesse-815.github.io/shac-resources';
+  const loc = window.location.href;
+  const isLive = loc.startsWith('https://Jesse-815.github.io') || loc.startsWith('http://Jesse-815.github.io');
+  const url = isLive ? loc.split('?')[0].split('#')[0] : canonical;
+
   document.getElementById('qr-url-display').textContent = url;
 
   const canvas = document.getElementById('qr-canvas');

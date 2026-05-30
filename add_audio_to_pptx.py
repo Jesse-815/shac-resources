@@ -25,7 +25,7 @@ ELEVENLABS_API_KEY = "3edf18bfe491b6d56480eb4b801091d3b735823f28858f8d9080194f6a
 VOICE_ID = "JBFqnCBsd6RMkjVDRZzb"  # "George" — change to any ElevenLabs voice ID
 MODEL_ID = "eleven_multilingual_v2"
 
-INPUT_PPTX  = "training_week_6_with_narration.pptx"   # path to your input file
+INPUT_PPTX  = "training_week_6_with_narration (2).pptx"   # path to your input file
 OUTPUT_PPTX = "training_week_6_with_audio.pptx"       # path for the output file
 # ─────────────────────────────────────────────────────────────────────────────
 

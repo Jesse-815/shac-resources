@@ -148,13 +148,15 @@ def add_audio_to_slide(zf_in: zipfile.ZipFile, zf_out: zipfile.ZipFile,
     pic_xml = (
         f'<p:pic xmlns:p="{PPTNS}" xmlns:a="{ANS}" xmlns:r="{RNS}">'
         f'<p:nvPicPr>'
-        f'<p:cNvPr id="{shape_id}" name="Audio{slide_index+1}"/>'
+        f'<p:cNvPr id="{shape_id}" name="Audio{slide_index+1}">'
+        f'<a:hlinkClick r:id="" action="ppaction://media"/>'
+        f'</p:cNvPr>'
         f'<p:cNvPicPr><a:picLocks noChangeAspect="1"/></p:cNvPicPr>'
         f'<p:nvPr><p:audioFile r:link="{audio_rId}"/></p:nvPr>'
         f'</p:nvPicPr>'
-        f'<p:blipFill><a:blip/><a:stretch><a:fillRect/></a:stretch></p:blipFill>'
+        f'<p:blipFill><a:blip r:embed="{audio_rId}"/><a:stretch><a:fillRect/></a:stretch></p:blipFill>'
         f'<p:spPr>'
-        f'<a:xfrm><a:off x="0" y="0"/><a:ext cx="1" cy="1"/></a:xfrm>'
+        f'<a:xfrm><a:off x="457200" y="457200"/><a:ext cx="457200" cy="457200"/></a:xfrm>'
         f'<a:prstGeom prst="rect"><a:avLst/></a:prstGeom>'
         f'</p:spPr>'
         f'</p:pic>'
@@ -244,6 +246,19 @@ def main():
             slides_rels_written = set()
 
             for item in zf_in.namelist():
+                # Fix [Content_Types].xml to include mp3
+                if item == "[Content_Types].xml":
+                    ct_xml = zf_in.read(item)
+                    ct_root = etree.fromstring(ct_xml)
+                    ct_ns = "http://schemas.openxmlformats.org/package/2006/content-types"
+                    existing_exts = {el.get("Extension") for el in ct_root.findall(f"{{{ct_ns}}}Default")}
+                    if "mp3" not in existing_exts:
+                        etree.SubElement(ct_root, f"{{{ct_ns}}}Default", {
+                            "Extension": "mp3",
+                            "ContentType": "audio/mpeg",
+                        })
+                    zf_out.writestr(item, etree.tostring(ct_root, xml_declaration=True, encoding="UTF-8", standalone=True))
+                    continue
                 # Skip slide files and their rels that we'll rewrite
                 slide_name_match = re.match(r"ppt/slides/(slide\d+)\.xml$", item)
                 rels_match = re.match(r"ppt/slides/_rels/(slide\d+)\.xml\.rels$", item)

@@ -1,0 +1,15 @@
+# Prismatic Hush
+
+## A Design Philosophy
+
+Light, before it becomes color, is a single quiet thing. Prismatic Hush begins there — in the instant before refraction, when white light still holds every hue folded inside itself in silence. The movement treats the arc not as decoration but as instrument: a diagram of a moment nobody can hold, drawn with the patience of someone who has watched the sky do this a thousand times and still bends closer each time it happens. Every composition is built the way an astronomer builds a star chart — as if the ephemeral deserved the same rigor as the observable.
+
+Space is left to breathe the way paper breathes around ink. A composition is not filled; it is calibrated. Negative space is not absence but instrument — the same restraint a violin maker uses when choosing not to varnish the last inch of the scroll. Where a lesser hand would crowd the page with ornament, Prismatic Hush trusts a single precise gesture, repeated with the discipline of a naturalist's field plate, to carry the whole weight of the composition. Margins are measured, not guessed; every inch of quiet is placed with the same deliberation as every inch of color.
+
+Color is treated as data, not decoration — the spectral order is sacred and never improvised, each band holding its place in the sequence the way a scientific plate would never reassign its legend. Saturation is tuned toward the muted, sun-faded register of old paper and pressed pigment rather than the shout of digital primaries, so that the arc reads as observed phenomenon rather than graphic flourish. Bands sit close enough to feel continuous, spaced apart enough that the hand behind each one is still visible — the mark of pigment laid down stroke by careful stroke, never poured.
+
+Typography enters only where the eye needs an anchor, and even then it whispers: a single word, a Roman numeral, a measurement mark, set in a thin, quiet serif or a clinical mono, never explaining what the image has already said. Text behaves like a caption on a specimen plate — present, exact, and utterly subordinate to the image it accompanies. Scale and rhythm follow the logic of a diagram legend: small ticks, small numerals, wide quiet fields, one dominant form.
+
+Every plate in this movement must look as though it took a master printmaker a hundred passes to get the register right — the bands aligned to the width of a hair, the paper grain earned rather than filtered on, the composition balanced with the unteachable instinct of someone who has spent a lifetime learning where a page wants a mark and where it does not. Nothing is arbitrary. Nothing is left approximate. This is the work of someone at the very top of their field, and it must show in the precision of the linework, the discipline of the palette, and the confidence of everything the page chooses not to say.
+
+Prismatic Hush is, finally, an argument: that the fleeting and the unmeasurable — a rainbow, a held breath, a promise — can be rendered with the same exacting hand as a diagram of the stars, and that doing so with restraint is what makes it art rather than illustration.
